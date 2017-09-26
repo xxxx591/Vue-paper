@@ -10,7 +10,7 @@
             <span v-if='show'>{{msg}}</span>
         </p>
         <p class="paper-p">论文作者
-            <el-input v-model="author" placeholder="请输入内容"></el-input>
+            <el-input v-model="author" placeholder="请输入内容.."></el-input>
         </p>
     </div>
 </template>
