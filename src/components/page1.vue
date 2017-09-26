@@ -6,7 +6,7 @@
             </el-checkbox>
         </p>
         <p class="paper-p">论文标题
-            <el-input v-model="title" placeholder="请输入内容..." @change="change" @blur="blur"></el-input>
+            <el-input v-model="title" placeholder="请输入内容..." @change="change"></el-input>
             <span v-if='show'>{{msg}}</span>
         </p>
         <p class="paper-p">论文作者
@@ -29,16 +29,12 @@ export default {
     },
     methods: {
         change() {
-            if (this.currentValue != '') {
+            if (this.title != '') {
                 this.show = false
-            }
-        },
-        blur(){
-            console.log(this.title)
-            if(this.title == ''){
+            }else{
                 this.show = true
             }
-        }
+        },
     }
 }
 </script>
