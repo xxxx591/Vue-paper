@@ -6,24 +6,33 @@
                     <div class="grid-content bg-purple">
                         <ul>
                             <li v-for="(val,index) in friendList" class='foot-list'>
-                                <router-link to="#" >{{val.value}}</router-link>
+                                <router-link :to="val.url">{{val.value}}</router-link>
                             </li>
                         </ul>
                     </div>
                 </el-col>
                 <el-col :span="6">
                     <div class="grid-content bg-purple-light">
-                        22
+                        <ul>
+                            <li v-for="val in aboutDocuments" class='foot-list'>
+                                <router-link to="">{{val}}</router-link>
+                            </li>
+                        </ul>
                     </div>
                 </el-col>
                 <el-col :span="6">
                     <div class="grid-content bg-purple">
-                        33
+                        <ul>
+                            <li v-for="val in contactMe" class='foot-list'>
+                                <router-link to="">{{val}}</router-link>
+                            </li>
+                        </ul>
                     </div>
                 </el-col>
                 <el-col :span="6">
                     <div class="grid-content bg-purple">
-                        44
+                        <p><img src="../assets/logo2.png" alt="" srcset="" width='160'></p>
+                        <p><img src="../assets/footLogo.png" alt="" srcset="" width='160' height='160'></p>
                     </div>
                 </el-col>
             </el-row>
@@ -41,25 +50,26 @@ export default {
                 { value: '乐思航官网', url: 'www.4399.com' }
             ],
             aboutDocuments: ['相关文档', '什么是抄袭？', '关于抄袭的常见问题', '如何防止抄袭'],
-            contactMe: ['网址：www.Papertime.cc', '邮箱：Miraclove@vip.qq.com', 'QQ：250173319'],
+            contactMe: ['联系我们','网址：www.Papertime.cc', '邮箱：Miraclove@vip.qq.com', 'QQ：250173319'],
         }
     },
 }
 </script>
 <style scoped>
-.el-row {
-    margin-bottom: 20px;
+.el-col{
+    margin-top:20px;
 }
-
-.el-col {
-    border-radius: 4px;
+.grid-content:first-of-type p {
+    margin-bottom: 10px;
 }
 .foot-list a{
-    color:#fff;
+    color:#999;
     text-decoration: none;
     line-height: 25px;
+    font-size: 14px;
 }
-.foot-list:first-of-type{
+.foot-list:first-of-type a{
+    color:#fff;
     font-weight: 600;
 }
 </style>
