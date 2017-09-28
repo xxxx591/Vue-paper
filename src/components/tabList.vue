@@ -46,5 +46,14 @@ export default {
 }
 </script>
 <style scoped>
-
+.el-menu-vertical-demo{
+  background: #fff;
+}
+.el-menu-item:first-of-type{
+  margin-top: 30px;
+}
+.el-menu-item{
+  background: #eef1f6;
+  margin-top: 20px;
+}
 </style>

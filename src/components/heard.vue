@@ -13,7 +13,7 @@
                     <a href="#">查看报告</a>
                 </el-menu-item>
                 <el-menu-item index="4">
-                        <a href="#">在线改重</a>
+                    <a href="#">在线改重</a>
                 </el-menu-item>
                 <el-menu-item index="5">
                     <a href="#">个人中心</a>
@@ -38,6 +38,12 @@
                     <el-menu-item index="10-3">使用帮助</el-menu-item>
                     <el-menu-item index="10-3">诚招代理</el-menu-item>
                 </el-submenu>
+                <div class="submit-btn">
+                    <el-button type="primary" size="small">登录</el-button>
+                    <el-button type="primary" size="small">注册</el-button>
+                </div>
+                
+
             </el-menu>
         </div>
     </div>
@@ -53,7 +59,6 @@ export default {
     },
     methods: {
         handleSelect(key, keyPath) {
-            console.log(key, keyPath);
         }
     }
 }
@@ -63,14 +68,21 @@ a {
     text-decoration: none;
 }
 
-.el-menu-item{
-    padding:0 12px;
+.el-menu-item {
+    padding: 0 12px;
 }
-.el-menu-item img{
+
+.el-menu-item img {
     width: 129px;
     height: 36px;
 }
-.el-submenu .el-menu-item{
-    min-width:auto;
+
+.el-submenu .el-menu-item {
+    min-width: auto;
+}
+.submit-btn{
+    height: 60px;
+    line-height: 60px;
+    float: right;
 }
 </style>
