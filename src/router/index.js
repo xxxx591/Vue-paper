@@ -1,7 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
 import tabList from "@/components/tabList";
-import Heard from "@/components/heard";
 import page1 from "@/components/page1";
 import page2 from "@/components/page2";
 import page3 from "@/components/page3";

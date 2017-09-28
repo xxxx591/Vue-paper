@@ -62,9 +62,7 @@ export default {
 a {
     text-decoration: none;
 }
-#heard-box{
-    background:#324157;
-}
+
 .el-menu-item{
     padding:0 12px;
 }

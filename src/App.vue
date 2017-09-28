@@ -9,7 +9,9 @@
               <tab-list></tab-list>
             </el-col>
             <el-col :span="19">
-              <router-view></router-view>
+              <transition name="el-fade-in-linear" mode="out-in">
+                <router-view></router-view>
+              </transition>
             </el-col>
           </div>
         </el-col>
@@ -18,20 +20,23 @@
         </el-col>
       </el-row>
     </div>
+    <foot-box></foot-box>
   </div>
 </template>
 
 <script>
 import HeardTab from '@/components/heard'
 import tabList from '@/components/tabList'
+import footBox from '@/components/foot'
 export default {
   name: 'app',
   components: {
     HeardTab,
-    tabList
+    tabList,
+    footBox,
   },
   methods: {
-  
+
   }
 }
 </script>
@@ -40,6 +45,32 @@ export default {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow: auto;
+  width: calc(100vw + 20px);
+}
+li{
+  list-style: none;
+}
+#heard-box {
+  background: #324157;
+}
+
+.content {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 #app {
@@ -50,11 +81,8 @@ export default {
   background: #f5f5f5;
 }
 
-.content {
-  width: 1200px;
-  margin: 0 auto;
-}
-.content-top{
+
+.content-top {
   margin-top: 25px;
 }
 </style>
