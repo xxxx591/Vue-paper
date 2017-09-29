@@ -144,10 +144,10 @@ a {
 }
 
 .login-icon>i {
-    margin: 0 10px;
-    font-size: 1.5em;
+    margin: 0 5px;
+    font-size: large;
     vertical-align: middle;
-    border: 1px solid #48576A;
+    border: 1px solid #D9D9D9;
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
