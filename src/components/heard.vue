@@ -39,12 +39,31 @@
                     <el-menu-item index="10-3">诚招代理</el-menu-item>
                 </el-submenu>
                 <div class="submit-btn">
-                    <el-button type="primary" size="small">登录</el-button>
+                    <el-button type="primary" size="small" @click="dialogTableVisible = true">登录</el-button>
                     <el-button type="primary" size="small">注册</el-button>
                 </div>
-                
-
             </el-menu>
+            <div class="login-box">
+                <el-dialog id='dial' ref='dialog' title="用户登录" v-model="dialogTableVisible" class="dialog-box">
+                    <el-row :gutter="20">
+                        <el-col :span="20" :offset="2">
+                            <div class="grid-content bg-purple" v-show="loginState">
+                                <el-input placeholder="请输入账号..." class="login-ipt">
+                                    <template slot="prepend">用户名</template>
+                                </el-input>
+                                <el-input placeholder="请输入密码..." class="password-ipt">
+                                    <template slot="prepend">密码</template>
+                                </el-input>
+                                <p class="forget-password" @click="changePassword">忘记密码？</p>
+                                <p class="argument-remember-password">
+                                     <el-checkbox v-model="checked">同意并遵守<span style="color:#0C7FE9">《服务条款》</span></el-checkbox>
+                                     <el-checkbox v-model="checked" style="float:right">记住密码</el-checkbox>
+                                </p>
+                            </div>
+                        </el-col>
+                    </el-row>
+                </el-dialog>
+            </div>
         </div>
     </div>
 </template>
@@ -55,10 +74,15 @@ export default {
         return {
             msg: '你好我是头部',
             activeIndex: '2',
+            dialogTableVisible: false,
+            loginState: true,
         }
     },
     methods: {
         handleSelect(key, keyPath) {
+        },
+        changePassword() {
+            this.loginState = !this.loginState;
         }
     }
 }
@@ -80,9 +104,31 @@ a {
 .el-submenu .el-menu-item {
     min-width: auto;
 }
-.submit-btn{
+
+.submit-btn {
     height: 60px;
     line-height: 60px;
     float: right;
+}
+
+.dialog-box:first-of-type {
+    width: 50%;
+    left: 25%;
+}
+
+.login-box {
+    text-align: left;
+}
+
+.login-ipt,
+.password-ipt {
+    margin: 10px 0;
+}
+.forget-password{
+    color:#3CC8D6;
+    text-align:right;
+}
+.grid-content p {
+    margin-top: 10px;
 }
 </style>
