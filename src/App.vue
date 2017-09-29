@@ -24,6 +24,7 @@
   </div>
 </template>
 
+
 <script>
 import HeardTab from '@/components/heard'
 import tabList from '@/components/tabList'
