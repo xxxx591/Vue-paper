@@ -145,11 +145,11 @@ a {
 
 .login-icon>i {
     margin: 0 5px;
-    font-size: large;
+    font-size: 1.4em!important;
     vertical-align: middle;
     border: 1px solid #D9D9D9;
     border-radius: 50%;
-    padding: 10px;
+    padding: 8px;
     cursor: pointer;
 }
 .el-icon-fa-qq{color:#4DAFEA;}
