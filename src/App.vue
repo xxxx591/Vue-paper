@@ -43,6 +43,7 @@ export default {
 </script>
 
 <style>
+
 * {
   margin: 0;
   padding: 0;
@@ -65,6 +66,7 @@ body {
 li{
   list-style: none;
 }
+
 #heard-box {
   background: #324157;
 }

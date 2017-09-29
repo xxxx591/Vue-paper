@@ -51,13 +51,21 @@
                                 <el-input placeholder="请输入账号..." class="login-ipt">
                                     <template slot="prepend">用户名</template>
                                 </el-input>
-                                <el-input placeholder="请输入密码..." class="password-ipt">
+                                <el-input placeholder="请输入密码..." class="password-ipt m-t-10">
                                     <template slot="prepend">密码</template>
                                 </el-input>
                                 <p class="forget-password" @click="changePassword">忘记密码？</p>
                                 <p class="argument-remember-password">
-                                     <el-checkbox v-model="checked">同意并遵守<span style="color:#0C7FE9">《服务条款》</span></el-checkbox>
-                                     <el-checkbox v-model="checked" style="float:right">记住密码</el-checkbox>
+                                    <el-checkbox v-model="checked">同意并遵守
+                                        <span style="color:#0C7FE9">《服务条款》</span>
+                                    </el-checkbox>
+                                    <el-checkbox v-model="checked" style="float:right">记住密码</el-checkbox>
+                                </p>
+                                <p class="login-icon">
+                                    <span>快速登录：</span>
+                                    <i class="el-icon-fa-qq"></i>
+                                    <i class="el-icon-fa-weixin"></i>
+                                    <i class="el-icon-fa-weibo"></i>
                                 </p>
                             </div>
                         </el-col>
@@ -76,6 +84,7 @@ export default {
             activeIndex: '2',
             dialogTableVisible: false,
             loginState: true,
+            checked: true
         }
     },
     methods: {
@@ -124,11 +133,29 @@ a {
 .password-ipt {
     margin: 10px 0;
 }
-.forget-password{
-    color:#3CC8D6;
-    text-align:right;
+
+.forget-password {
+    color: #3CC8D6;
+    text-align: right;
 }
+
 .grid-content p {
     margin-top: 10px;
 }
+
+.login-icon>i {
+    margin: 0 10px;
+    font-size: 1.5em;
+    vertical-align: middle;
+    border: 1px solid #48576A;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+.el-icon-fa-qq{color:#4DAFEA;}
+.el-icon-fa-qq:hover{border-color:#4DAFEA;}
+.el-icon-fa-weixin{color:#3EB135;}
+.el-icon-fa-weixin:hover{border-color:#3EB135;}
+.el-icon-fa-weibo{color:#DF4D69}
+.el-icon-fa-weibo:hover{border-color:#DF4D69;}
 </style>
