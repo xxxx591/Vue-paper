@@ -63,7 +63,7 @@ export default {
             var len = 0;
             for (var i = 0; i < this.paperValue.length; i++) { //遍历input框内内容
                 var values = this.paperValue.charAt(i);
-                if (values.match(/[^\x00-\xff]/ig) != null)   //匹配 一个汉字2个长度 一个字符1个长度
+                if (values.match(/[^\x00-\xff]\s/ig) != null)   //匹配 一个汉字2个长度 一个字符1个长度
                 {
                     len += 2;
                 }

@@ -83,9 +83,10 @@ li{
   text-align: center;
   background: #f5f5f5;
 }
-
-
 .content-top {
   margin-top: 25px;
+}
+.dialog-box .el-dialog--small{
+    width: 30%!important;
 }
 </style>

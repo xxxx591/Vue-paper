@@ -59,7 +59,7 @@
                                     <el-checkbox v-model="checked">同意并遵守
                                         <span style="color:#0C7FE9">《服务条款》</span>
                                     </el-checkbox>
-                                    <el-checkbox v-model="checked" style="float:right">记住密码</el-checkbox>
+                                    <el-checkbox v-model="checked2" style="float:right">记住密码</el-checkbox>
                                 </p>
                                 <p class="login-icon m-t-15">
                                     <span>快速登录：</span>
@@ -88,7 +88,8 @@ export default {
             activeIndex: '2',
             dialogTableVisible: false,
             loginState: true,
-            checked: true
+            checked: true,
+            checked2: true,
         }
     },
     methods: {
@@ -126,11 +127,13 @@ a {
     line-height: 60px;
     float: right;
 }
-
-.dialog-box:first-of-type {
+.dialog-box .el-dialog--small{
+    width: 30%!important;
+}
+/* .dialog-box:first-child {
     width: 50%;
     left: 25%;
-}
+} */
 .login-box {
     text-align: left;
 }
