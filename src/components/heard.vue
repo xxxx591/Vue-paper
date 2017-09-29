@@ -67,6 +67,10 @@
                                     <i class="el-icon-fa-weixin"></i>
                                     <i class="el-icon-fa-weibo"></i>
                                 </p>
+                                <p class="login-btn">
+                                    <el-button type="primary">登录</el-button>
+                                </p>
+                                <p class="forget-password" @click="signIn">立即注册</p>
                             </div>
                         </el-col>
                     </el-row>
@@ -91,7 +95,10 @@ export default {
         handleSelect(key, keyPath) {
         },
         changePassword() {
-            this.loginState = !this.loginState;
+            
+        },
+        signIn(){
+            
         }
     }
 }
@@ -124,25 +131,21 @@ a {
     width: 50%;
     left: 25%;
 }
-
 .login-box {
     text-align: left;
 }
-
 .login-ipt,
 .password-ipt {
     margin: 10px 0;
 }
-
 .forget-password {
     color: #3CC8D6;
     text-align: right;
+    cursor: pointer;
 }
-
 .grid-content p {
     margin-top: 10px;
 }
-
 .login-icon>i {
     margin: 0 5px;
     font-size: 1.4em!important;
@@ -158,4 +161,5 @@ a {
 .el-icon-fa-weixin:hover{border-color:#3EB135;}
 .el-icon-fa-weibo{color:#DF4D69}
 .el-icon-fa-weibo:hover{border-color:#DF4D69;}
+.login-btn button{width:100%;}
 </style>
