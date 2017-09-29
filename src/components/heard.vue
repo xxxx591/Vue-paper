@@ -47,30 +47,30 @@
                 <el-dialog id='dial' ref='dialog' title="用户登录" v-model="dialogTableVisible" class="dialog-box">
                     <el-row :gutter="20">
                         <el-col :span="20" :offset="2">
-                            <div class="grid-content bg-purple" v-show="loginState">
-                                <el-input placeholder="请输入账号..." class="login-ipt">
+                            <div class="login-interface" v-show="loginState">
+                                <el-input placeholder="请输入账号..." class="login-ipt m-t-15">
                                     <template slot="prepend">用户名</template>
                                 </el-input>
-                                <el-input placeholder="请输入密码..." class="password-ipt m-t-10">
+                                <el-input placeholder="请输入密码..." class="password-ipt m-t-15">
                                     <template slot="prepend">密码</template>
                                 </el-input>
                                 <p class="forget-password" @click="changePassword">忘记密码？</p>
-                                <p class="argument-remember-password">
+                                <p class="argument-remember-password m-t-15">
                                     <el-checkbox v-model="checked">同意并遵守
                                         <span style="color:#0C7FE9">《服务条款》</span>
                                     </el-checkbox>
                                     <el-checkbox v-model="checked" style="float:right">记住密码</el-checkbox>
                                 </p>
-                                <p class="login-icon">
+                                <p class="login-icon m-t-15">
                                     <span>快速登录：</span>
                                     <i class="el-icon-fa-qq"></i>
                                     <i class="el-icon-fa-weixin"></i>
                                     <i class="el-icon-fa-weibo"></i>
                                 </p>
-                                <p class="login-btn">
+                                <p class="login-btn m-t-15" >
                                     <el-button type="primary">登录</el-button>
                                 </p>
-                                <p class="forget-password" @click="signIn">立即注册</p>
+                                <p class="forget-password m-t-15" @click="signIn">立即注册</p>
                             </div>
                         </el-col>
                     </el-row>
