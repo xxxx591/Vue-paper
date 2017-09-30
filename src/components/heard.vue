@@ -127,13 +127,7 @@ a {
     line-height: 60px;
     float: right;
 }
-.dialog-box .el-dialog--small{
-    width: 30%!important;
-}
-/* .dialog-box:first-child {
-    width: 50%;
-    left: 25%;
-} */
+
 .login-box {
     text-align: left;
 }
