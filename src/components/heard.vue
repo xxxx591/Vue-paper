@@ -70,7 +70,7 @@
                                 <p class="login-btn m-t-15" >
                                     <el-button type="primary">登录</el-button>
                                 </p>
-                                <p class="forget-password m-t-15" @click="signIn">立即注册..</p>
+                                <p class="forget-password m-t-15" @click="signIn">立即注册...</p>
                             </div>
                         </el-col>
                     </el-row>
