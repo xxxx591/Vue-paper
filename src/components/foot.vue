@@ -50,26 +50,33 @@ export default {
                 { value: '乐思航官网', url: 'www.4399.com' }
             ],
             aboutDocuments: ['相关文档', '什么是抄袭？', '关于抄袭的常见问题', '如何防止抄袭'],
-            contactMe: ['联系我们','网址：www.Papertime.cc', '邮箱：Miraclove@vip.qq.com', 'QQ：250173319'],
+            contactMe: ['联系我们', '网址：www.Papertime.cc', '邮箱：Miraclove@vip.qq.com', 'QQ：250173319'],
         }
     },
 }
 </script>
 <style scoped>
-.el-col{
-    margin-top:20px;
+.el-row {
+    background: #324157;
 }
+
+.el-col {
+    margin-top: 20px;
+}
+
 .grid-content:first-of-type p {
     margin-bottom: 10px;
 }
-.foot-list a{
-    color:#999;
+
+.foot-list a {
+    color: #999;
     text-decoration: none;
     line-height: 25px;
     font-size: 14px;
 }
-.foot-list:first-of-type a{
-    color:#fff;
+
+.foot-list:first-of-type a {
+    color: #fff;
     font-weight: 600;
 }
 </style>
