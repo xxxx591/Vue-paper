@@ -27,7 +27,7 @@
                 <el-button type="info" size="large" @click="success">提交检测</el-button>
                 <el-button type="danger" size="large">领取免费字数</el-button>
             </div>
-            <p><el-tag type="danger" class="hint">温馨提示1</el-tag></p>
+            <p><el-tag type="danger" class="hint">温馨提示21</el-tag></p>
             <p class="hint-title">系统支持所有语种的论文检测，如中（简/繁）、英、日、法、德文等！</p>
             <p class="hint-title">系统在检测时会分析论文的前后文关系，所以请您提交论文的全部内容，如果是非全文的检测将不能保证检测的准确性。 </p>
             <p class="hint-title">被系统自动识别出来的非正文部分（如目录，标题，公式，图表，参考文献等）不参与检测，检测字数一般略小于论文字数。</p>
