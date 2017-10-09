@@ -16,7 +16,9 @@
           </div>
         </el-col>
         <el-col :span="8">
-          <div class="grid-content bg-purple"></div>
+          <div class="grid-content bg-purple">
+            <right-content></right-content>
+          </div>
         </el-col>
       </el-row>
     </div>
@@ -29,12 +31,14 @@
 import HeardTab from '@/components/heard'
 import tabList from '@/components/tabList'
 import footBox from '@/components/foot'
+import rightContent from '@/components/right'
 export default {
   name: 'app',
   components: {
     HeardTab,
     tabList,
     footBox,
+    rightContent
   },
   methods: {
 

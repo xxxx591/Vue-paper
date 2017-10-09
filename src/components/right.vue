@@ -3,7 +3,7 @@
         <el-row :gutter="20">
             
             <el-col :span="8">
-                <div class="grid-content bg-purple"></div>
+                <div class="grid-content bg-purple">{{msg}}</div>
             </el-col>
         </el-row>
     </div>
@@ -19,9 +19,6 @@ export default {
 }
 </script>
 <style scoped>
-.right-box{
-    margin-top: 35px;
-}
 .el-row {
     margin-bottom: 20px;
 }
