@@ -143,9 +143,6 @@ div {
 
 .hint-title {
     font-size: 12px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     line-height: 25px;
 }
 

@@ -39,12 +39,12 @@
                     <el-menu-item index="10-3">诚招代理</el-menu-item>
                 </el-submenu>
                 <div class="submit-btn">
-                    <el-button type="primary" size="small" @click="dialogTableVisible = true">登录</el-button>
-                    <el-button type="primary" size="small">注册</el-button>
+                    <el-button type="primary" size="small" @click="dialogTableVisible = true ; loginState = true; signInState = false; msg = '用户登录'">登录</el-button>
+                    <el-button type="primary" size="small" @click="dialogTableVisible = true ; loginState = false; signInState = true; msg = '用户注册'">注册</el-button>
                 </div>
             </el-menu>
             <div class="login-box">
-                <el-dialog id='dial' ref='dialog' title="用户登录" v-model="dialogTableVisible" class="dialog-box">
+                <el-dialog id='dial' ref='dialog' :title="msg" v-model="dialogTableVisible" class="dialog-box">
                     <el-row :gutter="20">
                         <el-col :span="20" :offset="2">
                             <div class="login-interface" v-show="loginState">
@@ -67,10 +67,33 @@
                                     <i class="el-icon-fa-weixin"></i>
                                     <i class="el-icon-fa-weibo"></i>
                                 </p>
-                                <p class="login-btn m-t-15" >
+                                <p class="login-btn m-t-15">
                                     <el-button type="primary">登录</el-button>
                                 </p>
                                 <p class="forget-password m-t-15" @click="signIn">立即注册</p>
+                            </div>
+                            <div class="login-interface" v-show="signInState">
+                                <p class="login-icon m-t-15">
+                                    <span>快速登录：</span>
+                                    <i class="el-icon-fa-qq"></i>
+                                    <i class="el-icon-fa-weixin"></i>
+                                    <i class="el-icon-fa-weibo"></i>
+                                </p>
+                                <el-input v-model="signInPhone" placeholder="请输入手机号码"></el-input>
+                                <el-input v-model="signInPassWord" placeholder="请输入密码"></el-input>
+                                <el-input placeholder="请再次输入密码"></el-input>
+                                <div class="signin-phone-box">
+                                    <el-input placeholder="请输入手机号码"></el-input>
+                                    <el-button type="primary">点击获取验证码</el-button>
+                                </div>
+                                <p class="argument-remember-password m-t-15">
+                                    <el-checkbox v-model="checked">同意并遵守
+                                        <span style="color:#0C7FE9">《服务条款》</span>
+                                    </el-checkbox>
+                                </p>
+                                <p class="login-btn m-t-15">
+                                    <el-button type="primary">立即注册</el-button>
+                                </p>
                             </div>
                         </el-col>
                     </el-row>
@@ -84,22 +107,32 @@ export default {
     name: 'heard',
     data() {
         return {
-            msg: '你好我是头部',
+            msg: '用户登录',
             activeIndex: '2',
             dialogTableVisible: false,
             loginState: true,
+            signInState: false,
             checked: true,
             checked2: true,
+            signInPhone: null,
+            signInPassWord: null,
         }
     },
     methods: {
+        dialogTableVisible() {
+            this.msg = '用户登录';
+            this.loginState = true;
+            this.signInState = false;
+        },
         handleSelect(key, keyPath) {
         },
         changePassword() {
-            
+
         },
-        signIn(){
-            
+        signIn() {
+            this.msg = '用户注册';
+            this.loginState = false;
+            this.signInState = true;
         }
     }
 }
@@ -131,18 +164,22 @@ a {
 .login-box {
     text-align: left;
 }
+
 .login-ipt,
 .password-ipt {
     margin: 10px 0;
 }
+
 .forget-password {
     color: #3CC8D6;
     text-align: right;
     cursor: pointer;
 }
+
 .grid-content p {
     margin-top: 10px;
 }
+
 .login-icon>i {
     margin: 0 5px;
     font-size: 1.4em!important;
@@ -152,11 +189,46 @@ a {
     padding: 8px;
     cursor: pointer;
 }
-.el-icon-fa-qq{color:#4DAFEA;}
-.el-icon-fa-qq:hover{border-color:#4DAFEA;}
-.el-icon-fa-weixin{color:#3EB135;}
-.el-icon-fa-weixin:hover{border-color:#3EB135;}
-.el-icon-fa-weibo{color:#DF4D69}
-.el-icon-fa-weibo:hover{border-color:#DF4D69;}
-.login-btn button{width:100%;}
+
+.el-icon-fa-qq {
+    color: #4DAFEA;
+}
+
+.el-icon-fa-qq:hover {
+    border-color: #4DAFEA;
+}
+
+.el-icon-fa-weixin {
+    color: #3EB135;
+}
+
+.el-icon-fa-weixin:hover {
+    border-color: #3EB135;
+}
+
+.el-icon-fa-weibo {
+    color: #DF4D69
+}
+
+.el-icon-fa-weibo:hover {
+    border-color: #DF4D69;
+}
+
+.login-btn button {
+    width: 100%;
+}
+
+.el-input {
+    margin: 10px 0;
+}
+
+.signin-phone-box {
+    position: relative;
+}
+
+.signin-phone-box button {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
 </style>

@@ -3,7 +3,7 @@
     <heard-tab></heard-tab>
     <div class="content content-top">
       <el-row :gutter="20" style="background: #f5f5f5;">
-        <el-col :span="16" style="background:#fff;">
+        <el-col :span="16" style="background:#fff;" class="grid-content bg-purple">
           <div class="grid-content bg-purple">
             <el-col :span="5">
               <tab-list></tab-list>
@@ -15,7 +15,7 @@
             </el-col>
           </div>
         </el-col>
-        <el-col :span="8">
+        <el-col :span="8" class="grid-content bg-purple">
           <div class="grid-content bg-purple">
             <right-content></right-content>
           </div>
@@ -47,14 +47,13 @@ export default {
 </script>
 
 <style>
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-li{
+li {
   list-style: none;
 }
 
@@ -75,10 +74,19 @@ li{
   text-align: center;
   background: #f5f5f5;
 }
+
 .content-top {
   margin-top: 25px;
 }
-.dialog-box .el-dialog--small{
-    width: 30%!important;
+
+.dialog-box .el-dialog--small {
+  width: 30%!important;
+}
+
+.right-box {
+  margin-top: 25px;
+  box-sizing: border-box;
+  padding: 20px;
+  background: #fff;
 }
 </style>

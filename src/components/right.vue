@@ -1,10 +1,16 @@
 <template>
     <div class="right-box">
         <el-row :gutter="20">
-            
-            <el-col :span="8">
-                <div class="grid-content bg-purple">{{msg}}</div>
-            </el-col>
+                <div class="grid-content bg-purple">
+                    <dl>
+                        <dt>数据库范围</dt>
+                        <dd>学术期刊，学位论文，会议论文，互联网，英文数据库（涵盖期刊，硕博，会议的英文数据）。</dd>
+                        <dt>检测范围</dt>
+                        <dd>涵盖所有中英文类别，包括哲学、经济学、管理学、法学、社会科学、教育学、文学、艺术学、历史学、理学、工学、农学、医学、政治学、军事学等。</dd>
+                        <dt>郑重声明</dt>
+                        <dd>PaperFree论文时间检测系统遵守相关保密规定，绝不收录和泄露您送检文档的任何信息，请放心检测！</dd>
+                    </dl>
+                </div>
         </el-row>
     </div>
 </template>
@@ -19,33 +25,22 @@ export default {
 }
 </script>
 <style scoped>
-.el-row {
-    margin-bottom: 20px;
+dl dt{
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 24px;
+    text-align: left;
 }
-
-.el-col {
-    border-radius: 4px;
+dl dd{
+    font-size: 14px;
+    color: #666;
+    line-height: 26px;
+    text-align: left;
+    margin-bottom: 10px;
 }
-
-.bg-purple-dark {
-    background: #99a9bf;
-}
-
-.bg-purple {
-    background: #d3dce6;
-}
-
-.bg-purple-light {
-    background: #e5e9f2;
-}
-
-.grid-content {
-    border-radius: 4px;
-    min-height: 36px;
-}
-
-.row-bg {
-    padding: 10px 0;
-    background-color: #f9fafc;
+.el-row{
+    margin:0!important;
+    
 }
 </style>
