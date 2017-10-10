@@ -4,9 +4,8 @@
             <div class="grid-content bg-purple">
                 <div class="block">
                     <el-carousel height="200px" indicator-position="outside" trigger="click" :autoplay=autoplay>
-                        <el-carousel-item v-for="item in 2" :key="item">
-                            <img src="../assets/lele.jpg" alt="1" srcset="">
-                            <img src="../assets/lele.jpg" alt="2" srcset="">
+                        <el-carousel-item v-for="(item,index) in imgSrc" :key="index">
+                            <img :src="item" alt="1" srcset="">
                         </el-carousel-item>
                     </el-carousel>
                 </div>
@@ -16,7 +15,7 @@
                     <dt>检测范围</dt>
                     <dd>涵盖所有中英文类别，包括哲学、经济学、管理学、法学、社会科学、教育学、文学、艺术学、历史学、理学、工学、农学、医学、政治学、军事学等。</dd>
                     <dt>郑重声明</dt>
-                    <dd>PaperFree论文时间检测系统遵守相关保密规定，绝不收录和泄露您送检文档的任何信息，请放心检测！</dd>
+                    <dd>PaperTime论文时间检测系统遵守相关保密规定，绝不收录和泄露您送检文档的任何信息，请放心检测！</dd>
                 </dl>
             </div>
         </el-row>
@@ -30,8 +29,8 @@ export default {
             msg: '我是right页面',
             autoplay:false,
             imgSrc:[
-                '../assets/lele.jpg',
-                '../assets/logo.png',
+                'http://img3.redocn.com/tupian/20151015/ribennvpuzhuangdongmankatongrenwutu_5093392.jpg',
+                'http://pic8.nipic.com/20100623/5208937_134307859911_2.jpg',
             ]
         }
     }
