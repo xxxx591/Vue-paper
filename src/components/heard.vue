@@ -79,13 +79,15 @@
                                     <i class="el-icon-fa-weixin"></i>
                                     <i class="el-icon-fa-weibo"></i>
                                 </p>
-                                <el-input v-model="signInPhone" placeholder="请输入手机号码"></el-input>
-                                <el-input v-model="signInPassWord" placeholder="请输入密码"></el-input>
+                                <el-input v-model="signInPhone" placeholder="请输入手机号码" @blur="change"></el-input>
+                                <el-input v-model="signInPassWord" placeholder="请输入密码" @blur="change1"></el-input>
                                 <el-input placeholder="请再次输入密码"></el-input>
                                 <div class="signin-phone-box">
                                     <el-input placeholder="请输入手机号码"></el-input>
                                     <el-button type="primary">点击获取验证码</el-button>
                                 </div>
+                                <p class="icon-sign" v-show="iconSignState"><i class="el-icon-close" ></i>{{msg2}}</p>
+                                <p class="icon-sign" v-show="iconSignState2"><i class="el-icon-close" ></i>{{msg2}}</p>
                                 <p class="argument-remember-password m-t-15">
                                     <el-checkbox v-model="checked">同意并遵守
                                         <span style="color:#0C7FE9">《服务条款》</span>
@@ -108,23 +110,40 @@ export default {
     data() {
         return {
             msg: '用户登录',
+            msg2: '请填写正确的手机号',
             activeIndex: '2',
             dialogTableVisible: false,
             loginState: true,
             signInState: false,
             checked: true,
             checked2: true,
-            signInPhone: null,
-            signInPassWord: null,
+            signInPhone: '',
+            signInPassWord: '',
+            iconSignState:false,
+            iconSignState2:false,
         }
     },
     methods: {
-        dialogTableVisible() {
-            this.msg = '用户登录';
-            this.loginState = true;
-            this.signInState = false;
+        change() {
+            if (this.signInPhone != '') {
+                this.iconSignState = false
+            } else {
+                this.iconSignState = true
+                this.iconSignState2 = false
+                this.msg2 = '请填写正确的手机号'
+            };
+        },
+        change1() {
+            if (this.signInPassWord != '') {
+                this.iconSignState2 = false
+            } else {
+                this.iconSignState2 = true;
+                this.iconSignState = false;
+                this.msg2 = '密码不能为空'
+            }
         },
         handleSelect(key, keyPath) {
+
         },
         changePassword() {
 
@@ -230,5 +249,17 @@ a {
     position: absolute;
     right: 0;
     top: 10px;
+}
+.icon-sign{
+    color: red;
+}
+.icon-sign i {
+    font-size: 12px;
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 3px;
+    color: white;
+    background: red;
 }
 </style>
