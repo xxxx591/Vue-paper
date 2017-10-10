@@ -5,7 +5,7 @@
                 <div class="block">
                     <el-carousel height="200px" indicator-position="outside" trigger="click" :autoplay=autoplay>
                         <el-carousel-item v-for="(item,index) in imgSrc" :key="index">
-                            <img :src="item" alt="1" srcset="">
+                            <img :src="item" :alt="index" srcset="">
                         </el-carousel-item>
                     </el-carousel>
                 </div>
