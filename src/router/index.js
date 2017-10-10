@@ -12,7 +12,7 @@ export default new Router({
   routes: [
     {
       path: "/",
-      component: page2
+      component: page1
     },
     {
       path: "/page1",
