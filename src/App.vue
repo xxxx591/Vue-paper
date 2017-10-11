@@ -17,7 +17,7 @@
         </el-col>
         <el-col :span="8" class="grid-content bg-purple">
           <div class="grid-content bg-purple">
-            <right-content></right-content>
+            <right-content v-show="isMune"></right-content>
           </div>
         </el-col>
       </el-row>
@@ -36,7 +36,7 @@ export default {
   name: 'app',
   data(){
     return {
-      
+      isMune:true,
     }
   },
   components: {
@@ -47,7 +47,12 @@ export default {
   },
   methods: {
 
-  }
+  },
+  watch:{
+    $route(to, from){
+      this.isMenu = to.meta.menu ? true : false;
+    }
+  },
 }
 </script>
 
