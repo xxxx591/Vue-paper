@@ -34,6 +34,11 @@ import footBox from '@/components/foot'
 import rightContent from '@/components/right'
 export default {
   name: 'app',
+  data(){
+    return {
+      
+    }
+  },
   components: {
     HeardTab,
     tabList,
