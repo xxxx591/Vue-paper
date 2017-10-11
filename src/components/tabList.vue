@@ -29,7 +29,7 @@ export default {
           this.$router.push('/page2')
           break;
         case '3':
-          this.$router.push('/page3')
+          this.$router.push('/page3/:menu')
           break;
         case '4':
           this.$router.push('/page4')
@@ -42,9 +42,6 @@ export default {
           break;
       }
     },
-    change(){
-      console.log('点击成功')
-    }
   }
 }
 </script>
