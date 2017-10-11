@@ -25,7 +25,7 @@ export default new Router({
     {
       path: "/page3",
       component: page3,
-      meta: { menu: 'xieyuanhang' }
+      meta: { name: 'xieyuanhang' }
     },
 
   ]

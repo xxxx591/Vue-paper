@@ -50,7 +50,7 @@ export default {
   },
   watch:{
     $route(to, from){
-      this.isMenu = to.meta.menu ? false : true;
+      this.isMenu = to.meta.name ? false : true;
     }
   },
 }
