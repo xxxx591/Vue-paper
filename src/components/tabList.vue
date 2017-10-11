@@ -29,7 +29,7 @@ export default {
           this.$router.push('/page2')
           break;
         case '3':
-          this.$router.push('/page3')
+          this.$router.push({ path: '/page3', query: { selected: "2" } })
           break;
         case '4':
           this.$router.push('/page4')
@@ -46,13 +46,15 @@ export default {
 }
 </script>
 <style scoped>
-.el-menu-vertical-demo{
+.el-menu-vertical-demo {
   background: #fff;
 }
-.el-menu-item:first-of-type{
+
+.el-menu-item:first-of-type {
   margin-top: 30px;
 }
-.el-menu-item{
+
+.el-menu-item {
   background: #eef1f6;
   margin-top: 20px;
 }
