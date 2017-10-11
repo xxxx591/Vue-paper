@@ -6,7 +6,7 @@
         <el-col :span="16" style="background:#fff;" class="grid-content bg-purple">
           <div class="grid-content bg-purple">
             <el-col :span="5">
-              <tab-list @click="change()"></tab-list>
+              <tab-list></tab-list>
             </el-col>
             <el-col :span="19">
               <transition name="el-fade-in-linear" mode="out-in">
@@ -46,9 +46,7 @@ export default {
     rightContent
   },
   methods: {
-    change(){
-      console.log(1)
-    }
+
   }
 }
 </script>
