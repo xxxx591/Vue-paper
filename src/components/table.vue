@@ -42,7 +42,17 @@
       data(){
         return {
           currentPage:1,
-          tpageSize:20
+          tpageSize:20,
+          columns:[
+              {title:"论文检测",state:'检测完成',result:'相似度：50%',submissionTime:'2017年10月11日15:33:40',option:'操作'},
+              {title:"论文检测",state:'检测完成',result:'相似度：50%',submissionTime:'2017年10月11日15:33:40',option:'操作'},
+              {title:"论文检测",state:'检测完成',result:'相似度：50%',submissionTime:'2017年10月11日15:33:40',option:'操作'},
+              {title:"论文检测",state:'检测完成',result:'相似度：50%',submissionTime:'2017年10月11日15:33:40',option:'操作'},
+              {title:"论文检测",state:'检测完成',result:'相似度：50%',submissionTime:'2017年10月11日15:33:40',option:'操作'},
+              {title:"论文检测",state:'检测完成',result:'相似度：50%',submissionTime:'2017年10月11日15:33:40',option:'操作'},
+              {title:"论文检测",state:'检测完成',result:'相似度：50%',submissionTime:'2017年10月11日15:33:40',option:'操作'},
+              {title:"论文检测",state:'检测完成',result:'相似度：50%',submissionTime:'2017年10月11日15:33:40',option:'操作'},
+          ]
         }
       },
       props:{
@@ -74,6 +84,9 @@
       },
       selectionChange:function(selections){
         this.$emit("selectionChange",selections);
+      },
+      rowClick(){
+          console.log('点击')
       }
     }
   }
@@ -121,7 +134,7 @@
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     color: #5e7382;
-    background-image: url(../../resource/images/null-data.png);
+    background-image: url(../assets/ckbg.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size:cover;

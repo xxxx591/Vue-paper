@@ -5,7 +5,7 @@
     <el-menu-item index="2">
       <i class="el-icon-document"></i>上传文本提交</el-menu-item>
     <el-menu-item index="3">
-      <i class="el-icon-upload2"></i>查看报告</el-menu-item>
+      <i class="el-icon-upload2" @click="change" id="viewReport"></i>查看报告</el-menu-item>
     <el-menu-item index="4">
       <i class="el-icon-plus"></i>新建自建库</el-menu-item>
     <el-menu-item index="5">
@@ -41,6 +41,9 @@ export default {
           this.$router.push('/page1')
           break;
       }
+    },
+    change(){
+      console.log('点击成功')
     }
   }
 }
