@@ -50,7 +50,19 @@ export default {
   },
   watch:{
     $route(to, from){
-      this.isMenu = to.selected ? false : false;
+      console.log(to.query.selected)
+      var contentBox = document.getElementsByClassName("el-col-16")[0]
+      var tabListBox = document.getElementsByClassName("el-col-5")[0]
+      console.log(contentBox)
+     if(to.query.selected==2){
+       this.isMune = false
+       contentBox.style.width = 100+ '%';
+       tabListBox.style.width = 13+ '%';
+     } else{
+       this.isMune = true
+        contentBox.style.width = 66.66667+ '%';
+       tabListBox.style.width = 20.83333+ '%';
+     }
     }
   },
 }
