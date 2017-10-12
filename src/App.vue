@@ -57,7 +57,7 @@ export default {
      if(to.query.selected==2){
        this.isMune = false
        contentBox.style.width = 100+ '%';
-       tabListBox.style.width = 13+ '%';
+       tabListBox.style.width = 13.33333+ '%';
      } else{
        this.isMune = true
         contentBox.style.width = 66.66667+ '%';
