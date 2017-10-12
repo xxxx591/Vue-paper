@@ -17,8 +17,8 @@
                 <template scope="scope">
                     <el-button size="small" type="primary">查看报告1</el-button>
                     <el-button size="small" type="primary">在线改重1</el-button>
-                    <el-button size="small" type="primary">下载报告1</el-button>
-                    <el-button size="small" type="danger">删除1</el-button>
+                    <el-button size="small" type="primary">下载报告</el-button>
+                    <el-button size="small" type="danger">删除</el-button>
                 </template>
             </el-table-column>
         </el-table>
