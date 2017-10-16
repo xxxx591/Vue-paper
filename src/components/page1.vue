@@ -10,7 +10,7 @@
             <span v-if='show'>{{msg}}</span>
         </div>
         <div class="paper-p">论文作者
-            <el-input v-model="author" placeholder="请输入内容...11111"></el-input>
+            <el-input v-model="author" placeholder="请输入内容...111111"></el-input>
         </div>
         <div>
             <p class="paper-title">论文长度(内容的长度不超过30万字,系统按照Word字数统计里面的字符数(不计空格)计算)</p>
