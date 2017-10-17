@@ -2,10 +2,10 @@ import Vue from "vue";
 import Router from "vue-router";
 import tabList from "@/components/tabList";
 import handInPapers from "@/components/handInPapers";
-import page2 from "@/components/page2";
-import page3 from "@/components/page3";
-import page4 from "@/components/page4";
-import page5 from "@/components/page5";
+import submitPaper from "@/components/submitPaper";
+import viewReport from "@/components/viewReport";
+import newLibrary from "@/components/newLibrary";
+import manageLibaray from "@/components/manageLibaray";
 
 Vue.use(Router);
 
@@ -14,27 +14,27 @@ export default new Router({
   routes: [
     {
       path: "/",
-      component: page1
+      component: handInPapers
     },
     {
-      path: "/page1",
-      component: page1
+      path: "/handInPapers",
+      component: handInPapers
     },
     {
-      path: "/page2",
-      component: page2
+      path: "/submitPaper",
+      component: submitPaper
     },
     {
-      path: "/page3",
-      component: page3
+      path: "/viewReport",
+      component: viewReport
     },
     {
-      path: "/page4",
-      component: page4
+      path: "/newLibrary",
+      component: newLibrary
     },
     {
-      path: "/page5",
-      component: page5
+      path: "/manageLibaray",
+      component: manageLibaray
     }
   ]
 });

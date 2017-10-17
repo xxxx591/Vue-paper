@@ -29,16 +29,16 @@ export default {
           this.$router.push('/submitPaper')
           break;
         case '3':
-          this.$router.push({ path: '/page3', query: { selected: "2" } })
+          this.$router.push({ path: '/viewReport', query: { selected: "2" } })
           break;
         case '4':
-          this.$router.push('/page4')
+          this.$router.push('/newLibrary')
           break;
         case '5':
-          this.$router.push('/page5')
+          this.$router.push('/manageLibaray')
           break;
         default:
-          this.$router.push('/page1')
+          this.$router.push('/handInPapers')
           break;
       }
     },

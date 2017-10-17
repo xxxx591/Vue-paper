@@ -6,7 +6,7 @@
             </el-checkbox>
         </div>
         <div class="paper-p">论文标题
-            <el-input v-model="title" placeholder="请输入内容..." @change="change"></el-input>
+            <el-input v-model="title" placeholder="请输入内容..." @change="change" :class="border"></el-input>
             <span v-if='show'>{{msg}}</span>
         </div>
         <div class="paper-p">论文作者
@@ -51,6 +51,7 @@ export default {
             consumptionNum: 0,  //用户余额字数
             extraWordNum: 0,    //需要充值字数 
             payMoney: 0,        //充值金额
+            border: 'border-normal',
         }
     },
     methods: {
@@ -65,12 +66,10 @@ export default {
             var len = 0;
             for (var i = 0; i < this.paperValue.length; i++) { //遍历input框内内容
                 var values = this.paperValue.charAt(i);
-                if (values.match(/[^\x00-\xff]/ig) != null) 
-                {
+                if (values.match(/[^\x00-\xff]/ig) != null) {
                     len += 2;
                 }
-                else
-                {
+                else {
                     len += 1;
                 }
             }
@@ -148,5 +147,13 @@ div {
 
 .hint-title:last-of-type {
     margin-bottom: 50px;
+}
+
+.border-red {
+    border-color: red;
+}
+
+.border-normal {
+    border-color: #bfcbd9;
 }
 </style>
