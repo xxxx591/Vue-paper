@@ -23,10 +23,10 @@ export default {
     handleSelect(key, keyPath) {
       switch (key) {
         case '1':
-          this.$router.push('/page1')
+          this.$router.push('/handInPapers')
           break;
         case '2':
-          this.$router.push('/page2')
+          this.$router.push('/submitPaper')
           break;
         case '3':
           this.$router.push({ path: '/page3', query: { selected: "2" } })
