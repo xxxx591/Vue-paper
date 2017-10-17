@@ -6,7 +6,7 @@
             </el-checkbox>
         </div>
         <div class="paper-p">论文标题
-            <el-input v-model="title" placeholder="请输入内容..." @change="change" :class="border"></el-input>
+            <el-input v-model="title" placeholder="请输入内容..." @change="change"></el-input>
             <span v-if='show'>{{msg}}</span>
         </div>
         <div class="paper-p">论文作者
