@@ -6,7 +6,7 @@ export default {
     name: 'zijianku',
     data(){
         return {
-            msg:"我是管理自建库页面11"
+            msg:"我是管理自建库页面1s1"
         }
     }
 }
