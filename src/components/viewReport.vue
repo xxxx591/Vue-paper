@@ -1,6 +1,6 @@
 <template>
     <div>
-        <el-table :data="tableData" border fit align="center" style="width: 100%">
+        <el-table :data="tableData" border fit align="center" style="width: 100%" resizable>
             <el-table-column fixed prop="title" label="标题" width="150">
             </el-table-column>
             <el-table-column prop="state" label="状态" width="120">
@@ -35,7 +35,7 @@ export default {
     data() {
         return {
             tableData: [
-                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
+                { title: "论文检测论文检测论文检测论文检测论文检测论文检测论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
                 { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
                 { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
                 { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
@@ -49,6 +49,7 @@ export default {
             ],
             currentPage: 1,
             tpageSize: 10,
+            totalCount:11,
         }
     },
     methods: {
