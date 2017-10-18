@@ -34,9 +34,9 @@ import footBox from '@/components/foot'
 import rightContent from '@/components/right'
 export default {
   name: 'app',
-  data(){
+  data() {
     return {
-      isMune:true,
+      isMune: true,
     }
   },
   components: {
@@ -48,21 +48,24 @@ export default {
   methods: {
 
   },
-  watch:{
-    $route(to, from){
+  watch: {
+    $route(to, from) {
       console.log(to.query.selected)
       var contentBox = document.getElementsByClassName("el-col-16")[0]
       var tabListBox = document.getElementsByClassName("el-col-5")[0]
+      var tableBox = document.getElementsByClassName("el-col-19")[0]
       console.log(contentBox)
-     if(to.query.selected==2){
-       this.isMune = false
-       contentBox.style.width = 100+ '%';
-       tabListBox.style.width = 13.33333+ '%';
-     } else{
-       this.isMune = true
-        contentBox.style.width = 66.66667+ '%';
-       tabListBox.style.width = 20.83333+ '%';
-     }
+      if (to.query.selected == 2) {
+        this.isMune = false
+        contentBox.style.width = 100 + '%';
+        tabListBox.style.width = 13.33333 + '%';
+        tableBox.style.width = 86.66666 + '%';
+      } else {
+        this.isMune = true
+        contentBox.style.width = 66.66667 + '%';
+        tabListBox.style.width = 20.83333 + '%';
+        tableBox.style.width = 79.16667 + '%';
+      }
     }
   },
 }

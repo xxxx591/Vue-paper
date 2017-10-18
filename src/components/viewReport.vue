@@ -1,17 +1,13 @@
 <template>
     <div>
-        <el-table :data="tableData" border fit align="center" style="width: 100%" resizable>
-            <el-table-column fixed prop="title" label="标题" width="150">
+        <el-table :data="tableData" border style="width: 100%" class="m-t-25" stripe="true">
+            <el-table-column fixed prop="title" label="标题" width="300">
             </el-table-column>
             <el-table-column prop="state" label="状态" width="120">
             </el-table-column>
-            <el-table-column prop="result" label="检测结果" width="120">
+            <el-table-column prop="result" label="检测结果" width="160">
             </el-table-column>
-            <el-table-column prop="submissionTime" label="提交时间" width="120">
-            </el-table-column>
-            <el-table-column prop="author" label="作者" width="120">
-            </el-table-column>
-            <el-table-column prop="lover" label="爱人" width="120">
+            <el-table-column prop="submissionTime" label="提交时间" width="220">
             </el-table-column>
             <el-table-column fixed="right" label="操作" width="350px">
                 <template scope="scope">
@@ -35,7 +31,7 @@ export default {
     data() {
         return {
             tableData: [
-                { title: "论文检测论文检测论文检测论文检测论文检测论文检测论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
+                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
                 { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
                 { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
                 { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
