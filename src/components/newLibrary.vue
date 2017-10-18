@@ -12,7 +12,7 @@ export default {
     name: 'zijianku',
     data() {
         return {
-            msg: "论文标题不能为空",
+            msg: "论文标题不能为空..",
             title: '',
             show: true
         }
