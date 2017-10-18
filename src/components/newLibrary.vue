@@ -14,7 +14,7 @@ export default {
         return {
             msg: "论文标题不能为空",
             title: '',
-            show: false
+            show: true
         }
     },
     methods: {

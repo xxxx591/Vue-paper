@@ -65,12 +65,9 @@ export default {
         selectionChange: function(selections) {
             this.$emit("selectionChange", selections);
         },
-        rowClick() {
-            console.log('点击')
-        }
+        
     },
     props: {
-        rowClick: Function,
         columns: Array,      //表格列配置数据,{vlaue:对应数据对象中的属性，label：对应的是标题文字，className：对应的是列的样式类名}
         totalCount: Number,  //表格数据总数
         pageSizes: Array,    //决定每页显示的条数[10,15,20,25]
