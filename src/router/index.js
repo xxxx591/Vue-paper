@@ -14,7 +14,7 @@ export default new Router({
   routes: [
     {
       path: "/",
-      component: handInPapers
+      component: newLibrary
     },
     {
       path: "/handInPapers",

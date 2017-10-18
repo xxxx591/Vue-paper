@@ -38,7 +38,8 @@
 .p-l-30{padding-left:30px;}
 .p-t-30{padding-top:30px;}
 .p-b-30{padding-bottom:30px;}
-.float-left{float: left;}
-.float-right{float: right;}
-.t-align-l{text-align: left;}
-.t-align-r{text-align: right;}
+.f-l{float: left;}
+.f-r{float: right;}
+.t-l{text-align: left;}
+.t-r{text-align: right;}
+.t-c{text-align: center;}
