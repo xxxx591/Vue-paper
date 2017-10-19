@@ -5,6 +5,8 @@
             <el-input v-model="title" placeholder="请输入内容..." @change="change" class="m-t-10 f-l"></el-input>
             <span v-if='show' class="t-c m-t-10 m-l-10">{{msg}}</span>
         </div>
+        <el-input type="textarea" :autosize="autoSize" placeholder="喜迎十九大，建设美好中国！" class="m-t-15">
+        </el-input>
         <div class="submit-file m-t-60 ">
             <p class="m-b-10 remind">提醒：系统仅支持txt、doc、docx格式文档</p>
             <el-upload class="upload-demo" drag action="https://jsonplaceholder.typicode.com/posts/" multiple :file-list="fileList3" :on-change="handchange">
@@ -12,11 +14,9 @@
                 <div class="el-upload__text">将文件拖到此处，或
                     <em>点击上传</em>
                 </div>
-                <div class="el-upload__tip" slot="word">只能上传Word文件，且不超过5Mb</div>
+                <div class="el-upload__tip" slot="word">只能上传Word文件，且不超过5Mb.</div>
             </el-upload>
         </div>
-        <el-input type="textarea" :autosize="autoSize" placeholder="喜迎十九大，建设美好中国！" class="m-t-15">
-        </el-input>
           <el-button type="primary" size="large" class="m-b-20 m-t-15">确认上传</el-button>
     </div>
 </template>
@@ -28,7 +28,7 @@ export default {
             msg: "论文标题不能为空..",
             title: '',
             show: true,
-            autoSize: { minRows: 3, maxRows: 10 },
+            autoSize: { minRows: 4, maxRows: 10 },
             fileTitle: '论文文档名称',
             fileList3: [{
                 name: 'food.jpeg',
