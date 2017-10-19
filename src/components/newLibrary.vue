@@ -14,7 +14,7 @@
                 <div class="el-upload__text">将文件拖到此处，或
                     <em>点击上传</em>
                 </div>
-                <div class="el-upload__tip" slot="word">只能上传Word文件，且不超过5M1b1a1aaa11.</div>
+                <div class="el-upload__tip" slot="word">只能上传Word文件，且不超过5Mb1a1a1aa11.</div>
             </el-upload>
         </div>
           <el-button type="primary" size="large" class="m-b-20 m-t-15">确认上传</el-button>
