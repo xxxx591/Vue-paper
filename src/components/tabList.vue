@@ -1,5 +1,5 @@
 <template>
-  <el-menu default-active="4" class="el-menu-vertical-demo" @select="handleSelect">
+  <el-menu default-active="4" class="el-menu-vertical-demo m-b-30" @select="handleSelect">
     <el-menu-item index="1">
       <i class="el-icon-edit"></i>黏贴文本提交</el-menu-item>
     <el-menu-item index="2">
@@ -14,36 +14,38 @@
 </template>
 <script>
 export default {
-  name: 'left',
+  name: "left",
   data() {
-    return {
-    }
+    return {};
   },
   methods: {
     handleSelect(key, keyPath) {
       switch (key) {
-        case '1':
-          this.$router.push('/handInPapers')
+        case "1":
+          this.$router.push("/handInPapers");
           break;
-        case '2':
-          this.$router.push('/submitPaper')
+        case "2":
+          this.$router.push("/submitPaper");
           break;
-        case '3':
-          this.$router.push({ path: '/viewReport', query: { selected: "2" } })
+        case "3":
+          this.$router.push({ path: "/viewReport", query: { selected: "2" } });
           break;
-        case '4':
-          this.$router.push('/newLibrary')
+        case "4":
+          this.$router.push("/newLibrary");
           break;
-        case '5':
-          this.$router.push('/manageLibaray')
+        case "5":
+          this.$router.push({
+            path: "/manageLibaray",
+            query: { selected: "2" }
+          });
           break;
         default:
-          this.$router.push('/handInPapers')
+          this.$router.push("/handInPapers");
           break;
       }
-    },
+    }
   }
-}
+};
 </script>
 <style scoped>
 .el-menu-vertical-demo {

@@ -1,6 +1,7 @@
 <template>
     <div>
-        <el-table :data="tableData" border style="width: 100%" class="m-t-25" stripe="true">
+        <el-table :data="tableData" border style="width: 100%" class="m-t-25" stripe>
+            <el-table-column type="selection" width="55"></el-table-column>></el-table-column>
             <el-table-column fixed prop="title" label="标题" width="300">
             </el-table-column>
             <el-table-column prop="state" label="状态" width="120">
@@ -18,7 +19,7 @@
                 </template>
             </el-table-column>
         </el-table>
-        <div class="pagination-footer">
+        <div class="pagination-footer m-t-10 m-b-10">
             <span class="description">{{description}}</span>
             <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="currentPage" :page-sizes="pageSizes" :page-size="tpageSize" layout="total, sizes, prev, pager, next, jumper" :total="totalCount">
             </el-pagination>
@@ -31,17 +32,11 @@ export default {
     data() {
         return {
             tableData: [
-                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
-                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
-                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
-                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
-                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
-                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
-                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
-                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
-                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
-                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
-                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40', author: '谢沅航', lover: '文乐' },
+                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40'},
+                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40'},
+                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40'},
+                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40'},
+                { title: "论文检测", state: '检测完成', result: '相似度：50%', submissionTime: '2017年10月11日15:33:40'},
             ],
             currentPage: 1,
             tpageSize: 10,
