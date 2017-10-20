@@ -7,7 +7,7 @@
     <el-menu-item index="3">
       <i class="el-icon-upload2"></i>查看报告</el-menu-item>
     <el-menu-item index="4">
-      <i class="el-icon-plus"></i>新建自建库</el-menu-item>
+      <i class="el-icon-plus"></i>新建自建库111</el-menu-item>
     <el-menu-item index="5">
       <i class="el-icon-setting"></i>管理自建库</el-menu-item>
   </el-menu>
