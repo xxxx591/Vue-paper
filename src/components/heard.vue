@@ -5,7 +5,7 @@
                 <el-menu-item index="0">
                     <img src="../assets/logo2.png" alt="" srcset="">
                 </el-menu-item>
-                <el-menu-item index="1">文献搜索</el-menu-item>
+                <el-menu-item index="1"><a href="http://www.papertime.cc/doc_search.html">文献搜索</a></el-menu-item>
                 <el-menu-item index="2" class="default-active">
                     <a href="#">论文查重</a>
                 </el-menu-item>

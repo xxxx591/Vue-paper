@@ -9,9 +9,9 @@
               <tab-list></tab-list>
             </el-col>
             <el-col :span="19">
-              <transition name="el-fade-in-linear" mode="out-in">
+              <!-- <transition name="el-fade-in-linear" mode="out-in"> -->
                 <router-view :meta="$route.meta"></router-view>
-              </transition>
+              <!-- </transition> -->
             </el-col>
           </div>
         </el-col>

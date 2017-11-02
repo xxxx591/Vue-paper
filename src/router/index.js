@@ -35,7 +35,10 @@ export default new Router({
     {
       path: "/manageLibaray",
       component: manageLibaray
-
+    },
+    {
+      path:"*",
+      component:handInPapers
     }
   ]
 });
