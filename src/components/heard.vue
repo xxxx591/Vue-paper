@@ -32,11 +32,7 @@
                 </el-menu-item>
                 <el-submenu index="10">
                     <template slot="title">关于我们</template>
-                    <el-menu-item index="10-1">首页</el-menu-item>
-                    <el-menu-item index="10-2">真伪查询</el-menu-item>
-                    <el-menu-item index="10-3">新闻资讯</el-menu-item>
-                    <el-menu-item index="10-3">使用帮助</el-menu-item>
-                    <el-menu-item index="10-3">诚招代理</el-menu-item>
+                    <el-menu-item :index="10-index" v-for="(val,index) in tableList" :key="index">{{val}}</el-menu-item>
                 </el-submenu>
                 <div class="submit-btn">
                     <el-button type="primary" size="small" @click="dialogTableVisible = true ; loginState = true; signInState = false; msg = '用户登录'">登录</el-button>
@@ -121,6 +117,7 @@ export default {
             signInPassWord: '',
             iconSignState:false,
             iconSignState2:false,
+            tableList:["首页","真伪查询","新闻资讯","使用帮助","诚招代理"]
         }
     },
     methods: {

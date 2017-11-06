@@ -81,16 +81,7 @@ export default {
         console.log(this.tableData);
     }
   },
-  props: {
-    columns: Array, //表格列配置数据,{vlaue:对应数据对象中的属性，label：对应的是标题文字，className：对应的是列的样式类名}
-    totalCount: Number, //表格数据总数
-    pageSizes: Array, //决定每页显示的条数[10,15,20,25]
-    checkBox: Boolean, //决定是否显示复选框
-    description: String, //分页脚底左侧的数据说明
-    tableHeight: Number, //分页列表的高度
-    pageSize: Number,
-    sortChange: Function //用户点击列表头进行排序 { column, prop, order }
-  }
+
 };
 </script>
 <style scoped>
