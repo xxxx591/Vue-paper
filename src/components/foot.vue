@@ -45,9 +45,9 @@ export default {
   data() {
     return {
       friendList: [
-        { value: "丁香人才网", url: "www.baidu.com" },
-        { value: "文献求助", url: "www.sina.com" },
-        { value: "乐思航官网", url: "www.4399.com" }
+        { value: "丁香人才网", url: "www.baidu.com", id:0},
+        { value: "文献求助", url: "www.sina.com", id:1 },
+        { value: "乐思航官网", url: "www.4399.com", id:2 }
       ],
       aboutDocuments: ["相关文档", "什么是抄袭？", "关于抄袭的常见问题", "如何防止抄袭"],
       contactMe: [
