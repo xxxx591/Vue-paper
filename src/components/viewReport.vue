@@ -2,11 +2,11 @@
     <div>
         <el-table :data="tableData" border style="width: 100%" class="m-t-25" stripe highlight-current-row>
             <el-table-column type="selection" width="55"></el-table-column>></el-table-column>
-            <el-table-column fixed prop="title" label="标题" width="300">
+            <el-table-column fixed prop="title" label="标题" min-width="150">
             </el-table-column>
             <el-table-column prop="state" label="状态" width="120">
             </el-table-column>
-            <el-table-column prop="result" label="检测结果" width="160">
+            <el-table-column prop="result" label="检测结果" width="140">
             </el-table-column>
             <el-table-column prop="submissionTime" label="提交时间" width="220">
             </el-table-column>
