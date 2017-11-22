@@ -15,7 +15,7 @@
                     <div class="grid-content bg-purple-light">
                         <ul>
                             <li v-for="val in aboutDocuments" class="foot-list" :key="val.id">
-                                <router-link to="">{{val}}-13-</router-link>
+                                <router-link to="">{{val}}-1234-</router-link>
                             </li>
                         </ul>
                     </div>
